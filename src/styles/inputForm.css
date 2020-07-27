@@ -1,0 +1,21 @@
+.input-component{
+    display: flex;
+    align-items: center;         
+}
+.input-form{
+    display: flex;
+    align-items: center; /*correct*/    
+  
+    text-align: center;
+}
+form{
+   margin: 0 auto;
+   
+}
+input{   
+    height: 25px;    
+}
+
+.fa{
+    padding: 5px;
+}
