@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import "../styles/SearchResults.css";
+
 const SearchResults = ({ searchResults }) => {
   return (
     <div className="SearchResults">
       <div className="test">
-          
         {searchResults.map((results) => {
           return (
             <div key={results.image} className="innerSearchResult">

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import getRecipes from '../requests/getRecipes.js';
-import "../styles/inputForm.css";
+import getRecipes from "../requests/getRecipes";
+import "../styles/Search.css";
 
 const Search = ({ setSearchResults }) => {
   const [value, setValue] = useState("");
 
   const handleSubmit = async (event) => {
-   
     event.preventDefault(); // stops browser reloading
     setSearchResults(await getRecipes(value));
   };
@@ -19,7 +18,7 @@ const Search = ({ setSearchResults }) => {
           name="recipeName"
           type="text"
           placeholder="Enter ingredients"
-          onChange={(e)=>setValue(e.target.value)}
+          onChange={(e) => setValue(e.target.value)}
         />
         <button type="submit" className="submit">
           Go!
