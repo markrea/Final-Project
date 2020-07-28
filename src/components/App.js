@@ -1,25 +1,32 @@
-import React from "react";
-import InputForm from "./inputForm";
+import React, { useState } from "react";
+import axios from "axios";
+import Search from "./Search";
+import SearchResults from "./SearchResults";
 
 import "../styles/App.css";
 
 function App() {
-  const getRecipe = (event) => {
-    const recipeName = event.target.elements.recipeName.value;
-    event.preventDefault();
-    console.log(recipeName);
-  }
-  
+  const [searchResults, setSearchResults] = useState(null);
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Fridge Tracker</h1>
-        </header>
+      </header>
+      <Search setSearchResults={setSearchResults} />
+      
+      <div className="search-results">
+          {
+                   
+           (searchResults)? 
+            <SearchResults searchResults = {searchResults} /> :
+           
+           <div><h2 className="results-text">No results... yet.</h2></div>              
+           
+          }
+        </div>
 
-        <InputForm getRecipe={getRecipe} />
-     
-    </div>
+</div>
   );
 }
 
