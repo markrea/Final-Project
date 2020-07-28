@@ -5,8 +5,9 @@ import "../styles/App.css";
 
 function App() {
   const getRecipe = (event) => {
+    const recipeName = event.target.elements.recipeName.value;
     event.preventDefault();
-    //console.log(event.target);
+    console.log(recipeName);
   }
   
 

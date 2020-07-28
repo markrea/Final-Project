@@ -7,7 +7,7 @@ const InputForm = ({ getRecipe }) => {
       <fieldset>
         <input
           id="search"
-          name="recipeSearch"
+          name="recipeName"
           type="text"
           placeholder="Enter ingredients"
         />
