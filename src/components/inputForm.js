@@ -1,20 +1,22 @@
 import React from "react";
 import "../styles/inputForm.css";
 
-const InputForm = () => {
+const InputForm = ({ getRecipe }) => {
   return (
-    <div className="input-component">
-      <form className="input-form">
-        <i className="fa fa-search" aria-hidden="true" />
-
+    <form type="text" className="input-form" onSubmit={getRecipe}>
+      <fieldset>
         <input
           id="search"
-          name="search"
+          name="recipeSearch"
           type="text"
           placeholder="Enter ingredients"
         />
-      </form>
-    </div>
+        <button type="submit" className="submit">
+          Go!
+        </button>
+      </fieldset>
+    </form>
   );
 };
 export default InputForm;
+//  <i className="fa fa-search" aria-hidden="true" />

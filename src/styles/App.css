@@ -1,13 +1,14 @@
 .App {
   margin: 0;
   padding: 0;  
-  background-color: #282c34;
-  min-height: 100vh;
- 
+  background-color: #f0f2f5ad;
+  min-height: 100vh; 
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 h1{
   text-align: center;  
+  background-color:rgba(175, 187, 8, 0.74);
+  height: 80px;
 }
