@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import getRecipes from "../requests/getRecipes";
 import "../styles/Search.css";
+import SearchForm from "./SearchForm";
 
 const Search = ({ setSearchResults }) => {
   const [value, setValue] = useState("");
@@ -10,21 +11,18 @@ const Search = ({ setSearchResults }) => {
     setSearchResults(await getRecipes(value));
   };
 
+  const handleChange = async (e) => {
+    setValue(e.target.value);
+  };
+
   return (
-    <form type="text" className="input-form" onSubmit={handleSubmit}>
-      <fieldset>
-        <input
-          id="search"
-          name="recipeName"
-          type="text"
-          placeholder="Enter ingredients"
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <button type="submit" className="submit">
-          Go!
-        </button>
-      </fieldset>
-    </form>
+    <div className="searchFormDiv" data-testid="searchFormDiv">
+      <SearchForm
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        query={value}
+      />
+    </div>
   );
 };
 export default Search;

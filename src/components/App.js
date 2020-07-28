@@ -14,19 +14,17 @@ function App() {
         <h1>Fridge Tracker</h1>
       </header>
       <Search setSearchResults={setSearchResults} />
-      
-      <div className="search-results">
-          {
-                   
-           (searchResults)? 
-            <SearchResults searchResults = {searchResults} /> :
-           
-           <div><h2 className="results-text">No results... yet.</h2></div>              
-           
-          }
-        </div>
 
-</div>
+      <div className="search-results" data-testid="search-div">
+        {searchResults ? (
+          <SearchResults searchResults={searchResults} />
+        ) : (
+          <div>
+            <h2 className="results-text">No results... yet.</h2>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
