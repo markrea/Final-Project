@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "../styles/SearchResults.css";
+import recipeLink from "../requests/recipeLink";
+
 
 const SearchResults = ({ searchResults }) => {
   return (
@@ -13,6 +15,8 @@ const SearchResults = ({ searchResults }) => {
               <img src={results.image} alt="mockAlt" className="card-photo" />
 
               <figcaption className="caption">{results.title}</figcaption>
+              <a href={recipeLink(results.id)}>More Details</a>
+              {console.log(recipeLink(results.id))}
             </div>
           );
         })}

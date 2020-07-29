@@ -1,6 +1,9 @@
 import axios from "axios";
 
 const API_KEY = "96b004d159144ba09fb4b7e07ef4ac0a";
+const API_KEY2 = "9f3d2d3a6daa4261ba913329d624d06c";
+const API_KEY3 = "257a8c4b423e48649fb5c5824c41b8eb";
+
 const getRecipes = (query) => {
   if (!query) {
     return Promise.resolve([]);
@@ -10,7 +13,7 @@ const getRecipes = (query) => {
 
   return axios
     .get(
-      `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY}&ingredients=${request}`
+      `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY3}&ingredients=${request}`
     )
     .then((response) => {
       const Results = response.data;
@@ -20,6 +23,7 @@ const getRecipes = (query) => {
         return {
           image: result.image,
           title: result.title,
+          id: result.id,
         };
       });
       // console.log(processed.title);
