@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import Search from "./Search";
 import SearchResults from "./SearchResults";
-
 import "../styles/App.css";
+const dotenv = require("dotenv").config();
 
 function App() {
   const [searchResults, setSearchResults] = useState(null);
