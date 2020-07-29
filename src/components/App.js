@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Search from "./Search";
 import SearchResults from "./SearchResults";
 
@@ -23,6 +24,9 @@ function App() {
             <h2 className="results-text">No results... yet.</h2>
           </div>
         )}
+        <BrowserRouter>
+          <Route path="/" exact render={(props) => <HomePage {...props} />} />
+        </BrowserRouter>
       </div>
     </div>
   );
