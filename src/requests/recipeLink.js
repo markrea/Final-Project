@@ -6,11 +6,7 @@ const API_KEY = process.env.REACT_APP_API_KEY1;
 const API_KEY2 = process.env.REACT_APP_API_KEY2;
 const API_KEY3 = process.env.REACT_APP_API_KEY3;
 
-/* const recipeLink = () => {
-  console.log(recipeResponseData.sourceUrl);
-  return recipeResponseData.sourceUrl;
 
-}; */
 
 const recipeLink = async (id) => {
   await axios
@@ -26,19 +22,6 @@ const recipeLink = async (id) => {
       alert("Error");
     });
 };
-// const recipeLink = (id) => {
-//    axios
-//     .get(
-    //   `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY3}`
-//     )
-//     .then((res) => {
-//       console.log(res.data.sourceUrl);
-//       const link = res.data.sourceUrl;
-//       return link;
-//     })
-//     .catch((err) => {
-//       alert("Error");
-//     });
-// };
+
 
 export default recipeLink;

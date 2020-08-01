@@ -1,55 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import PropTypes from "prop-types";
-
 import "../styles/SearchResults.css";
 import recipeLink from "../requests/recipeLink";
 
-<<<<<<< HEAD
-const API_KEY2 = "48aba1bc5bce4ba3901fc4b1e3591949";
-
-=======
->>>>>>> 79c2a4fcb6a009fce773c6232dd727f7b8571f65
-const SearchResults = ({ searchResults }) => {
-  const recipeFinder = (id) => {
-    return axios
+//const API_KEY2 = "48aba1bc5bce4ba3901fc4b1e3591949";
+const Result = ({ results }) => {
+  const [href, setHref] = useState("");
+  useEffect(() => {
+    axios
       .get(
-        `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY2}`
+        `https://api.spoonacular.com/recipes/${results.id}/information?apiKey=${API_KEY2}`
       )
       .then((response) => {
-        const links = response.data.sourceUrl;
-        console.log(links);
-        return links;
+        const link = response.data.sourceUrl;
+        return setHref(link);
       })
       .catch((err) => console.log(err));
-  };
+  }, []);
+  return (
+    <div key={results.image} className="innerSearchResult">
+      <img src={results.image} alt="mockAlt" className="card-photo" />
+      <figcaption className="caption">{results.title}</figcaption>
+      <a href={href} target="_blank">
+        More Details
+      </a>
+    </div>
+  );
+};
+const SearchResults = ({ searchResults }) => {
   return (
     <div className="SearchResults" data-testid="results-div">
       <div className="test">
         {searchResults.map((results) => (
-          <div key={results.image} className="innerSearchResult">
-            <img src={results.image} alt="mockAlt" className="card-photo" />
-
-              <figcaption className="caption">{results.title}</figcaption>
-              <a href={recipeFinder(results.id)} target="_blank">
-                More Details
-          </a>
-              {/*<a href="#">
-                <button type="submit" onClick={recipeFinder(results.id)}>
-                  See More
-                </button>
-        </a>*/}
-              {/* console.log(recipeLink(results.id)) */}
-            </div>
-          );
-        })}
+          <Result key={results.id} results={results} />
+        ))}
       </div>
     </div>
   );
 };
 SearchResults.propTypes = {
-  searchResults: PropTypes.array,
+  Result: PropTypes.array,
 };
-
 export default SearchResults;
