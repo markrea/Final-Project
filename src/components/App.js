@@ -5,6 +5,7 @@ import Search from "./Search";
 import SearchResults from "./SearchResults";
 import HomePage from "./HomePage";
 import SearchResultsCard from "./SearchResultsCard";
+import SideBar from "./SideBar";
 
 import "../styles/App.css";
 
@@ -13,8 +14,12 @@ function App() {
 
   return (
     <div className="App">
+      
       <BrowserRouter>
+      <SideBar />
+      
         <Switch>
+        
           <Route path="/" exact render={(props) => <HomePage {...props} />} />
           <Route
             path="/recipes"
@@ -23,6 +28,7 @@ function App() {
           />
         </Switch>
       </BrowserRouter>
+      
       <SearchResultsCard searchResults={searchResults} />
       <Search setSearchResults={setSearchResults} />
     </div>
