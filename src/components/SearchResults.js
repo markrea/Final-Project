@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "../styles/SearchResults.css";
 import recipeLink from "../requests/recipeLink";
 
-//const API_KEY2 = "48aba1bc5bce4ba3901fc4b1e3591949";
+const API_KEY2 = "48aba1bc5bce4ba3901fc4b1e3591949";
 const Result = ({ results }) => {
   const [href, setHref] = useState("");
   useEffect(() => {

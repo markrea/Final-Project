@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Search from "./Search";
 import SearchResults from "./SearchResults";
 
-
 import HomePage from "./HomePage";
 import SearchResultsCard from "./SearchResultsCard";
-import SideBar from "./SideBar";
-
+import NavBar from "./NavBar";
 import "../styles/App.css";
+
 const dotenv = require("dotenv").config();
 
 function App() {
@@ -17,21 +15,16 @@ function App() {
 
   return (
     <div className="App">
-      
       <BrowserRouter>
-      <SideBar />
-      
+        <NavBar />
+
         <Switch>
-        
           <Route path="/" exact render={(props) => <HomePage {...props} />} />
-          <Route
-            path="/recipes"
-            exact
-            render={(props) => <SearchResults {...props} />}
+          <Route path="/recipes" exact render={(props) => <SearchResults {...props} />}
           />
         </Switch>
       </BrowserRouter>
-      
+
       <SearchResultsCard searchResults={searchResults} />
       <Search setSearchResults={setSearchResults} />
     </div>

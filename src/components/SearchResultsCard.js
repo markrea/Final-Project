@@ -10,7 +10,7 @@ const SearchResultsCard = ({searchResults}) => {
           <SearchResults searchResults={searchResults} />
         ) : (
           <div>
-            <h2 className="results-text">No results... yet.</h2>
+            <h2 className="results-text"></h2>
           </div>
         )}
       </div>
