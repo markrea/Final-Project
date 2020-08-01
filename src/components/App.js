@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Search from "./Search";
 import SearchResults from "./SearchResults";
+
+
+import HomePage from "./HomePage";
+import SearchResultsCard from "./SearchResultsCard";
+import SideBar from "./SideBar";
+
 import "../styles/App.css";
 const dotenv = require("dotenv").config();
 
@@ -10,20 +17,23 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Fridge Tracker</h1>
-      </header>
+      
+      <BrowserRouter>
+      <SideBar />
+      
+        <Switch>
+        
+          <Route path="/" exact render={(props) => <HomePage {...props} />} />
+          <Route
+            path="/recipes"
+            exact
+            render={(props) => <SearchResults {...props} />}
+          />
+        </Switch>
+      </BrowserRouter>
+      
+      <SearchResultsCard searchResults={searchResults} />
       <Search setSearchResults={setSearchResults} />
-
-      <div className="search-results" data-testid="search-div">
-        {searchResults ? (
-          <SearchResults searchResults={searchResults} />
-        ) : (
-          <div>
-            <h2 className="results-text">No results... yet.</h2>
-          </div>
-        )}
-      </div>
     </div>
   );
 }
