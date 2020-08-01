@@ -3,11 +3,14 @@ import axios from "axios";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Search from "./Search";
 import SearchResults from "./SearchResults";
+
+
 import HomePage from "./HomePage";
 import SearchResultsCard from "./SearchResultsCard";
 import SideBar from "./SideBar";
 
 import "../styles/App.css";
+const dotenv = require("dotenv").config();
 
 function App() {
   const [searchResults, setSearchResults] = useState(null);

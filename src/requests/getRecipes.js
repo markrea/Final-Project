@@ -1,8 +1,11 @@
 import axios from "axios";
 
-const API_KEY = "96b004d159144ba09fb4b7e07ef4ac0a";
-const API_KEY2 = "9f3d2d3a6daa4261ba913329d624d06c";
-const API_KEY3 = "257a8c4b423e48649fb5c5824c41b8eb";
+const API_KEY = process.env.REACT_APP_API_KEY1;
+//const API_KEY2 = process.env.REACT_APP_API_KEY2;
+const API_KEY3 = process.env.REACT_APP_API_KEY3;
+const API_KEY2 = "48aba1bc5bce4ba3901fc4b1e3591949";
+
+
 
 const getRecipes = (query) => {
   if (!query) {
@@ -13,7 +16,7 @@ const getRecipes = (query) => {
 
   return axios
     .get(
-      `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY3}&ingredients=${request}`
+      `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY2}&ingredients=${request}&number=2`
     )
     .then((response) => {
       const Results = response.data;
