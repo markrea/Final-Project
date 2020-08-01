@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+form {   
+    border: 1px solid rgba(226, 209, 209, 0.288);  
+    margin: 0 auto;  
+    height: 50px;   
+    margin: 20px;
+    align-items: center;  
+    text-align: center;     
+    padding: 0;   
+  
+}
+fieldset{
+    border: none;
+}
+
+label, input, button {
+    font-size: 1rem;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;   
+  
+}
