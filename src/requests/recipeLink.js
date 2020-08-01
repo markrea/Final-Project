@@ -2,9 +2,9 @@ import React from "react";
 import axios from "axios";
 import recipeResponseData from "./exampleRecipeData";
 
-const API_KEY = "96b004d159144ba09fb4b7e07ef4ac0a";
-const API_KEY2 = "48aba1bc5bce4ba3901fc4b1e3591949"; // new
-const API_KEY3 = "257a8c4b423e48649fb5c5824c41b8eb";
+const API_KEY = process.env.REACT_APP_API_KEY1;
+const API_KEY2 = process.env.REACT_APP_API_KEY2;
+const API_KEY3 = process.env.REACT_APP_API_KEY3;
 
 /* const recipeLink = () => {
   console.log(recipeResponseData.sourceUrl);
@@ -26,5 +26,19 @@ const recipeLink = async (id) => {
       alert("Error");
     });
 };
+// const recipeLink = (id) => {
+//    axios
+//     .get(
+    //   `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY3}`
+//     )
+//     .then((res) => {
+//       console.log(res.data.sourceUrl);
+//       const link = res.data.sourceUrl;
+//       return link;
+//     })
+//     .catch((err) => {
+//       alert("Error");
+//     });
+// };
 
 export default recipeLink;

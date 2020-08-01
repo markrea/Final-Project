@@ -6,8 +6,11 @@ import PropTypes from "prop-types";
 import "../styles/SearchResults.css";
 import recipeLink from "../requests/recipeLink";
 
+<<<<<<< HEAD
 const API_KEY2 = "48aba1bc5bce4ba3901fc4b1e3591949";
 
+=======
+>>>>>>> 79c2a4fcb6a009fce773c6232dd727f7b8571f65
 const SearchResults = ({ searchResults }) => {
   const recipeFinder = (id) => {
     return axios
@@ -24,10 +27,9 @@ const SearchResults = ({ searchResults }) => {
   return (
     <div className="SearchResults" data-testid="results-div">
       <div className="test">
-        {searchResults.map((results) => {
-          return (
-            <div key={results.image} className="innerSearchResult">
-              <img src={results.image} alt="mockAlt" className="card-photo" />
+        {searchResults.map((results) => (
+          <div key={results.image} className="innerSearchResult">
+            <img src={results.image} alt="mockAlt" className="card-photo" />
 
               <figcaption className="caption">{results.title}</figcaption>
               <a href={recipeFinder(results.id)} target="_blank">
