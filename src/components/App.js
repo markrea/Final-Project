@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Search from "./Search";
 import SearchResults from "./SearchResults";
@@ -16,7 +15,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <SideBar />
-
         <Switch>
           <Route path="/" exact render={(props) => <HomePage {...props} />} />
           <Route

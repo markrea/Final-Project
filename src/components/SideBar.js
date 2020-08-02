@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
-    <div>
+    <div data-testid="SideBar">
       <Link to="/">
         <li>HomePage</li>
       </Link>
