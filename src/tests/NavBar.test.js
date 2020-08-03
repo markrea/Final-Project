@@ -21,6 +21,25 @@ describe("NavBar", () => {
     );
     expect(getByTestId("navBar")).toBeInTheDocument();
   });
+  it("displays a logo", () => {
+    const { getByTestId } = render(
+      <MemoryRouter>
+        <NavBar />
+      </MemoryRouter>
+    );
+    expect(getByTestId("logo")).toBeInTheDocument();
+  });
+  it("displays a list with Home, search by inredients, recipe, and random recipe", () => {
+    const { getByText } = render(
+      <MemoryRouter>
+        <NavBar />
+      </MemoryRouter>
+    );
+    expect(getByText("Home")).toHaveClass("menu-item");
+    expect(getByText("Search by ingredients")).toHaveClass("menu-item");
+    expect(getByText("Search by recipe")).toHaveClass("menu-item");
+    expect(getByText("Get random recipe")).toHaveClass("menu-item");
+  });
   it("contains 4 link elements", () => {
     const { getAllByRole } = render(
       <MemoryRouter>
