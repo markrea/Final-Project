@@ -5,7 +5,7 @@ import { slide as Menu } from "react-burger-menu";
 
 const NavBar = () => {
   return (
-    <div className="navBar">
+    <div className="navBar" data-testid="navBar">
       <div className="logo">
         <h1 className="appName">Fridge Tracker</h1>
       </div>
