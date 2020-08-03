@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import getRecipes from "../requests/getRecipes";
-import "../styles/Search.css";
+import getRecipes from "../../requests/getRecipes";
+import "../../styles/Search.css";
 import SearchForm from "./SearchForm";
 
 const Search = ({ setSearchResults }) => {

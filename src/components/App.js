@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-import Search from "./Search";
-import SearchResults from "./SearchResults";
+import Search from "../components/SearchByIngredients/Search";
+import SearchResults from "../components/SearchByIngredients/SearchResults";
 
 import HomePage from "./HomePage";
-import SearchResultsCard from "./SearchResultsCard";
+import SearchResultsCard from "./SearchByIngredients/SearchResultsCard";
 import NavBar from "./NavBar";
 import "../styles/App.css";
-
+import SearchByIngredients from "../components/SearchByIngredients/SearchByIngredients";
 const dotenv = require("dotenv").config();
 
 function App() {
@@ -15,18 +15,32 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <header className="App-header">
         <NavBar />
 
         <Switch>
-          <Route path="/" exact render={(props) => <HomePage {...props} />} />
-          <Route path="/recipes" exact render={(props) => <SearchResults {...props} />}
+          <Route exact path="/" component={HomePage} />
+
+          <Route
+            exact
+            path="/search-by-ingredients"
+            component={SearchByIngredients}
           />
         </Switch>
-      </BrowserRouter>
 
-      <SearchResultsCard searchResults={searchResults} />
-      <Search setSearchResults={setSearchResults} />
+        {/*
+      <Switch>
+        <Route path="/" exact render={(props) => <HomePage {...props} />} />
+       
+       <Route
+          path="/search-by-ingredients"
+          exact
+          render={(props) => <SearchResults {...props} />}
+        />
+      </Switch> */}
+        {/* <Search setSearchResults={setSearchResults} />
+      <SearchResultsCard searchResults={searchResults} /> */}
+      </header>
     </div>
   );
 }

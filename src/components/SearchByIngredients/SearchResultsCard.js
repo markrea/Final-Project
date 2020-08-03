@@ -1,6 +1,6 @@
 import React from "react";
 import SearchResults from "./SearchResults";
-import "../styles/App.css";
+import "../../styles/App.css";
 
 const SearchResultsCard = ({searchResults}) => {
   return (
