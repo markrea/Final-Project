@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Search from "./Search";
 import SearchResults from "./SearchResults";
@@ -17,12 +16,9 @@ function App() {
 
   return (
     <div className="App">
-      
       <BrowserRouter>
-      <SideBar />
-      
+        <SideBar />
         <Switch>
-        
           <Route path="/" exact render={(props) => <HomePage {...props} />} />
           <Route
             path="/recipes"
@@ -31,7 +27,7 @@ function App() {
           />
         </Switch>
       </BrowserRouter>
-      
+
       <SearchResultsCard searchResults={searchResults} />
       <Search setSearchResults={setSearchResults} />
     </div>
