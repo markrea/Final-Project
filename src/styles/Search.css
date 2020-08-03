@@ -4,27 +4,53 @@
 }
 
 form {   
-    border: 1px solid rgba(226, 209, 209, 0.288);  
-    margin: 0 auto;  
+    /*border: 1px solid rgba(226, 209, 209, 0.288);  */
+   margin: 0 auto;  
     height: 50px;   
     margin: 20px;
     align-items: center;  
     text-align: center;     
-    padding: 0;   
+    padding: 0;  
+    
   
 }
 fieldset{
     border: none;
 }
-h4{
+h4, h6{
     text-align: center;
     color: grey;
     padding: 30px;
     
 }
 label, input, button {
-    font-size: 1rem;
-    padding: 0.2em;
-    margin: 0.1em 0.2em;   
+  
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 0;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
   
 }
+button{
+    border-radius: 0px 10px 10px 0px;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.623);
+    transition: 0.3s all;
+
+}
+#search{
+   /* border: 1px solid red;*/
+    width: 20%;
+    
+    border-radius:  10px 0px 0px 10px;
+    position: relative;
+    background-color: rgba(214, 203, 203, 0.507);
+    transition: 0.3s all;
+}
+#search:hover {
+    background-color: rgba(255, 255, 255, 0.623);
+    /*box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);*/
+  }

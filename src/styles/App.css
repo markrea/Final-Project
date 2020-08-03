@@ -1,9 +1,16 @@
+body,html{
+  margin: 0;
+  padding:0;
+}
 .App {
   margin: 0;
-  padding: 0;  
-  background-color: #f0f2f5ad;
-  min-height: 100vh; 
+   
+  background-image: url('https://i.pinimg.com/originals/b0/43/c1/b043c1be7ed0d4f085e356e159250c69.jpg'); 
+ 
+  background-size: cover;
+
+  height: calc(100vh - 9px); 
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
-

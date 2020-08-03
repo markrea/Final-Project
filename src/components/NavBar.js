@@ -36,7 +36,6 @@ const NavBar = () => {
         </li>
         <hr />
       </Menu>
-
     </div>
   );
 };

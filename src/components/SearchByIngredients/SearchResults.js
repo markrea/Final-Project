@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import "../../styles/SearchResults.css";
-import recipeLink from "../../requests/recipeLink";
 
 const API_KEY2 = "48aba1bc5bce4ba3901fc4b1e3591949";
 const Result = ({ results }) => {
@@ -22,7 +21,7 @@ const Result = ({ results }) => {
     <div key={results.image} className="innerSearchResult">
       <img src={results.image} alt="mockAlt" className="card-photo" />
       <figcaption className="caption">{results.title}</figcaption>
-      <a href={href} target="_blank">
+      <a href={href} target="_blank" rel="noopener noreferrer" >
         More Details
       </a>
     </div>

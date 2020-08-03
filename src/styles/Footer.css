@@ -1,0 +1,7 @@
+
+.Footer { 
+    position: absolute; 
+    left: 0 ; right: 0; bottom: 0; 
+    height: 50px;
+    background-color:rgba(133, 187, 8, 0.582);
+}
