@@ -8,7 +8,7 @@ const SearchByIngredients = () => {
 
   return (
     <div className="SearchByIngredients">
-      <h1>Search By Ingredients</h1>
+      <h4>Search By Ingredients</h4>
 
       <Search setSearchResults={setSearchResults} />
       <SearchResultsCard searchResults={searchResults} />
