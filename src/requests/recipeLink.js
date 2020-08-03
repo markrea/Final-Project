@@ -1,6 +1,6 @@
-import React from "react";
+
 import axios from "axios";
-import recipeResponseData from "./exampleRecipeData";
+//import recipeResponseData from "./exampleRecipeData";
 
 const API_KEY = process.env.REACT_APP_API_KEY1;
 //const API_KEY2 = process.env.REACT_APP_API_KEY2;

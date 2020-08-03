@@ -1,0 +1,10 @@
+.SearchByIngredientsText, .SearchByRecipeText{
+    
+    background: rgba(214, 203, 203, 0.507);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+h4, h6{
+    color: rgb(255, 255, 255);
+}

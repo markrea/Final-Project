@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 const HomePage = () => {
   return (
     <div>
       <header className="App-header">
-        <h4>Welcome to the Fridge Tracker app!</h4>
+        <h4> Fridge Tracker</h4>
       </header>
     </div>
   );
