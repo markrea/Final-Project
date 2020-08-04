@@ -4,6 +4,14 @@ import { MemoryRouter } from "react-router-dom";
 import "@testing-library/jest-dom/extend-expect";
 import NavBar from "../components/NavBar";
 
+const setUp = () => {
+  const { asFragment, getByTestId, getByText, getAllByRole } = render(
+    <MemoryRouter>
+      <NavBar />
+    </MemoryRouter>
+  );
+};
+
 describe("NavBar", () => {
   it("component renders correctly", () => {
     const { asFragment } = render(
@@ -76,7 +84,7 @@ describe("NavBar", () => {
       "/search-by-ingredients"
     );
   });
-  it("should navigate to SearchByRecipe page with /search-by-ingredients", () => {
+  it("should navigate to SearchByRecipe page with /search-by-recipe", () => {
     const { getByText } = render(
       <MemoryRouter>
         <NavBar />
