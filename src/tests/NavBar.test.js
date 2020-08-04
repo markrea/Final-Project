@@ -13,6 +13,14 @@ describe("NavBar", () => {
     );
     expect(asFragment).toMatchSnapshot();
   });
+  it("renders a header", () => {
+    const { getByText } = render(
+      <MemoryRouter>
+        <NavBar />
+      </MemoryRouter>
+    );
+    expect(getByText("Fridge Tracker")).toBeInTheDocument();
+  });
   it("renders a navBar div", () => {
     const { getByTestId } = render(
       <MemoryRouter>
@@ -29,7 +37,7 @@ describe("NavBar", () => {
     );
     expect(getByTestId("logo")).toBeInTheDocument();
   });
-  it("displays a list with Home, search by inredients, recipe, and random recipe", () => {
+  it("displays a list with Home, search by ingredients, recipe, and random recipe", () => {
     const { getByText } = render(
       <MemoryRouter>
         <NavBar />
@@ -48,5 +56,46 @@ describe("NavBar", () => {
     );
     const links = getAllByRole("link");
     expect(links).toHaveLength(4);
+  });
+  it("should navigate to HomePage with /", () => {
+    const { getByText } = render(
+      <MemoryRouter>
+        <NavBar />
+      </MemoryRouter>
+    );
+    expect(getByText("Home").closest("a")).toHaveAttribute("href", "/");
+  });
+  it("should navigate to SearchByIngredients page with /search-by-ingredients", () => {
+    const { getByText } = render(
+      <MemoryRouter>
+        <NavBar />
+      </MemoryRouter>
+    );
+    expect(getByText("Search by ingredients").closest("a")).toHaveAttribute(
+      "href",
+      "/search-by-ingredients"
+    );
+  });
+  it("should navigate to SearchByRecipe page with /search-by-ingredients", () => {
+    const { getByText } = render(
+      <MemoryRouter>
+        <NavBar />
+      </MemoryRouter>
+    );
+    expect(getByText("Search by recipe").closest("a")).toHaveAttribute(
+      "href",
+      "/search-by-recipe"
+    );
+  });
+  it("should navigate to RandomRecipe page with /get-random-recipe", () => {
+    const { getByText } = render(
+      <MemoryRouter>
+        <NavBar />
+      </MemoryRouter>
+    );
+    expect(getByText("Get random recipe").closest("a")).toHaveAttribute(
+      "href",
+      "/get-random-recipe"
+    );
   });
 });
