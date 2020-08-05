@@ -10,11 +10,14 @@ const SearchByRecipe = () => {
   return (
     <div className="SearchByIngredients">
       <div className="TitleText">
-        <h4>Search By Recipe</h4>
-        <h6>Enter a recipe to get started!</h6>
+        <h2>Search By Recipe</h2>
       </div>
-      <Search setSearchResults={setSearchResults} />
-      <SearchResultsCard searchResults={searchResults} />
+      <div className="FormText">
+        <h6>Enter a recipe to get started!</h6>
+
+        <Search setSearchResults={setSearchResults} />
+        <SearchResultsCard searchResults={searchResults} />
+      </div>
     </div>
   );
 };
@@ -52,7 +55,6 @@ const SearchByRecipe = () => {
         <h4>Search By Recipe</h4>
         <h6>Enter a recipe to search</h6>
       </div>
-<<<<<<< HEAD
       <SearchForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}
@@ -61,12 +63,6 @@ const SearchByRecipe = () => {
       {/*
       <Search setSearchResults={setSearchResults} />
      <SearchResultsCard searchResults={searchResults} /> 
-=======
-      <div data-testid="searchRecipeFormDiv">
-        <SearchRecipeForm />
-        {/*  <SearchResultsCard searchResults={searchResults} /> */}
-      </div>
->>>>>>> f1f3860ebb62e8a667b94ae370d4d673df2ad04b
     </div>
   );
 };

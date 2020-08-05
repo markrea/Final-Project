@@ -1,9 +1,33 @@
 h2{
-    color: rgb(236, 230, 230);
+    color: rgb(68, 67, 67);
     text-align: center;
     padding: 2rem;
     font-family: 'Josefin Slab', serif;
+    background: rgba(173, 152, 152, 0.507);
+    border-radius: 5px;
+    margin: 10px;
+    
 }
-h4{
+.mainText h4:nth-child(2n+1){
     font-family: 'Josefin Slab', serif;
+    background: rgba(214, 203, 203, 0.507);
+    margin: 10px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.mainText h4:nth-child(2n){
+    font-family: 'Josefin Slab', serif;
+    background: rgba(182, 159, 159, 0.507);
+    margin: 10px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+}
+
+.mainText h4{
+    color: rgb(73, 71, 71);
 }
