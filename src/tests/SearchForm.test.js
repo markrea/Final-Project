@@ -1,11 +1,11 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import SearchForm from "../components/SearchResults";
+import SearchForm from "../components/SearchByIngredients/SearchForm";
 import "@testing-library/jest-dom/extend-expect";
 
 const props = {
   handleChange: jest.fn(),
-  handleSearch: jest.fn(),
+  handleSubmit: jest.fn(),
   query: "random",
 };
 
@@ -28,7 +28,7 @@ describe("SearchForm", () => {
     const { getByRole } = render(<SearchForm {...props} />);
     const btn = getByRole("button");
     expect(btn).toBeInTheDocument();
-    expect(btn).toHaveTextContent("Add");
+    expect(btn).toHaveTextContent("Go");
   });
   it("changes the state when input is changed", () => {
     const { getByTestId } = render(<SearchForm {...props} />);
@@ -39,9 +39,9 @@ describe("SearchForm", () => {
   });
   it("calls handleSearch on submission of form", () => {
     const { getByTestId } = render(<SearchForm {...props} />);
-    const { handleSearch } = props;
+    const { handleSubmit } = props;
     const form = getByTestId("searchForm");
     fireEvent.submit(form);
-    expect(handleSearch).toHaveBeenCalled();
+    expect(handleSubmit).toHaveBeenCalled();
   });
 });
