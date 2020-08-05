@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import "../styles/App.css";
 import SearchByIngredients from "./SearchByIngredients/SearchByIngredients";
 import SearchByRecipe from "./SearchByRecipe/SearchByRecipe";
+import RandomRecipe from "./RandomRecipe/RandomRecipe"
 
 const dotenv = require("dotenv").config();
 
@@ -26,8 +27,9 @@ function App() {
             path="/search-by-ingredients"
             component={SearchByIngredients}
           />
-          <Route exact path="/search-by-recipe" component={SearchByRecipe}
-          />
+          <Route exact path="/search-by-recipe" component={SearchByRecipe} />
+
+          <Route exact path="/get-random-recipe" component={RandomRecipe} />
         </Switch>
 
         <Footer />
