@@ -1,5 +1,9 @@
-h4{
-    color: grey;
+h2{
+    color: rgb(236, 230, 230);
     text-align: center;
     padding: 2rem;
+    font-family: 'Josefin Slab', serif;
+}
+h4{
+    font-family: 'Josefin Slab', serif;
 }

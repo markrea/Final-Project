@@ -1,11 +1,16 @@
 .navBar{
     display: flex;    
     background-color:rgba(133, 187, 8, 0.582);
-    height: 80px;
+    height: inherit;
 }
-h1{      
-    height: 80px;
+h1{          
     margin-left: 2rem;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: lighter;
+    font-size: 3em;
+    background: -webkit-linear-gradient(rgb(6, 10, 6), rgb(18, 134, 2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .navbar-links-item {

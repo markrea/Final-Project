@@ -26,8 +26,7 @@ function App() {
             path="/search-by-ingredients"
             component={SearchByIngredients}
           />
-          <Route exact path="/search-by-recipe" component={SearchByRecipe}
-          />
+          <Route exact path="/search-by-recipe" component={SearchByRecipe} />
         </Switch>
 
         <Footer />

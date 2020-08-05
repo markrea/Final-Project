@@ -1,32 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../styles/Search.css";
 
-const SearchRecipeForm = () => {
-  const [value, setValue] = useState("");
-
-  const handleSubmit = async (event) => {
-    event.preventDefault(); // stops browser reloading
-  };
-
-  const handleChange = async (e) => {
-    setValue(e.target.value);
-  };
-
+const SearchForm = ({ handleSubmit, handleChange, query }) => {
   return (
     <form
       type="text"
       className="input-form"
       onSubmit={handleSubmit}
-      data-testid="searchRecipeForm"
+      data-testid="searchForm"
     >
       <fieldset>
         <input
           id="search"
           name="recipeName"
           type="text"
-          placeholder="Enter a recipe"
+          placeholder="Enter ingredients"
           onChange={handleChange}
-          // value={query}
+          value={query}
           data-testid="input-id"
         />
         <button type="submit" className="submit">
@@ -37,4 +27,4 @@ const SearchRecipeForm = () => {
   );
 };
 
-export default SearchRecipeForm;
+export default SearchForm;
