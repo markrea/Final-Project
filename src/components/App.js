@@ -14,7 +14,7 @@ function App() {
   // const [searchResults, setSearchResults] = useState(null);
 
   return (
-    <div className="App">
+    <div className="App" data-testid="App-div">
       <header className="App-header">
         <NavBar />
 
