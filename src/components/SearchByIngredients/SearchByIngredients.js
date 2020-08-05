@@ -8,7 +8,7 @@ const SearchByIngredients = () => {
   const [searchResults, setSearchResults] = useState(null);
 
   return (
-    <div className="SearchByIngredients">
+    <div className="SearchByIngredients" data-testid="searchByIngredientsDiv">
       <div className="SearchByIngredientsText">
         <h4>Search By Ingredients</h4>
         <h6>Enter your ingredients below to see what you can make!</h6>
