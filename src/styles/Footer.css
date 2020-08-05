@@ -5,3 +5,9 @@
     height: 50px;
     background-color:rgba(133, 187, 8, 0.582);
 }
+.FooterText{
+    font-size: 1.3rem;
+    font-family: 'Fredericka the Great', cursive;
+    
+    text-align: center;
+}
