@@ -8,4 +8,9 @@ describe("SearchByRecipe", () => {
     const { asFragment } = render(<SearchByRecipe />);
     expect(asFragment).toMatchSnapshot();
   });
+  it("gives user option to search by recipe", () => {
+    const { getByTestId, getByText } = render(<SearchByRecipe />);
+    expect(getByTestId("searchRecipeFormDiv")).toBeInTheDocument();
+    expect(getByText("Search By Recipe")).toBeInTheDocument();
+  });
 });
