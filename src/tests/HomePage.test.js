@@ -8,4 +8,8 @@ describe("HomePage", () => {
     const { asFragment } = render(<HomePage />);
     expect(asFragment).toMatchSnapshot();
   });
+  it("dipplays a header", () => {
+    const { getByText } = render(<HomePage />);
+    expect(getByText("Fridge Tracker")).toBeInTheDocument();
+  });
 });
