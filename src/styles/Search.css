@@ -47,7 +47,7 @@ button:hover{
     
     border-radius:  10px 0px 0px 10px;
     position: relative;
-    background-color: rgba(133, 187, 8, 0.342);;
+    background-color: rgba(133, 187, 8, 0.26);;
     transition: 0.3s all;
 }
 #search:hover {
