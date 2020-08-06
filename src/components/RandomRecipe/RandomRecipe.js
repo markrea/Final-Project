@@ -13,11 +13,13 @@ const RandomRecipe = () => {
       <div className="SearchByIngredientsText">
         <h2>Random Recipe</h2>
         <div className="FormText">
-          <h6>Click the button to get a random recipe!</h6>
+          <h6>Can&apos;t decide what to make? See a random recipe!</h6>
         </div>
 
         <RandomSearch setSearchResults={setSearchResults} />
-        <SearchResultsCard className="randomResults" searchResults={searchResults} />
+        <div className="randomResults">
+          <SearchResultsCard searchResults={searchResults} />
+        </div>
       </div>
     </div>
   );
