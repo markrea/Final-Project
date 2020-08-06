@@ -9,7 +9,7 @@ const SearchByRecipe = () => {
 
   return (
     <div className="SearchByIngredients">
-      <div className="TitleText">
+      <div className="SearchByIngredientsText">
         <h2>Search By Recipe</h2>
       </div>
       <div className="FormText">

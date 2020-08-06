@@ -1,0 +1,10 @@
+.randomButton{
+    display:table-cell;
+
+    border-radius: 10px 10px;
+    margin: auto;   
+    
+    margin-top: 40px;
+    width: 100px;    
+    align-content: center;    
+}

@@ -1,17 +1,4 @@
 
-.TitleText{
-     
-    border-radius: 5px;
-    margin: 10px;
-    background: rgba(173, 152, 152, 0.507);
-    font-family: 'Josefin Slab', serif;
-    
-
-}
-.TitleText h2{
-    color: rgb(68, 67, 67);
-}
-
 .FormText{
    
     background: rgba(214, 203, 203, 0.507);
@@ -22,7 +9,7 @@
 
 }
 
-h4, h6{
+ h6{
     color: rgb(68, 67, 67);
     font-family: 'Josefin Slab', serif;
     font-size: 2rem;
