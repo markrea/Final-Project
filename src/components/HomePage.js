@@ -4,7 +4,7 @@ import "../styles/HomePage.css";
 const HomePage = () => {
   return (
     <div>
-      <header className="App-header">
+      <header className="App-header" data-testid="HomePage-div">
         <h2> Welcome to the Fridge Tracker App</h2>
       </header>
       <div className="mainText">
