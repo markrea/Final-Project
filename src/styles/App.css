@@ -4,8 +4,7 @@ body,html {
 }
 
 .App {
-  margin: 0;
-   
+  margin: 0;   
   background-image: url('https://images.pexels.com/photos/2750558/pexels-photo-2750558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');  
   background-size: cover;
   height: 100vh; 

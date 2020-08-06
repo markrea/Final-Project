@@ -1,13 +1,18 @@
 
 .Footer { 
-    position: absolute; 
     left: 0 ; right: 0; bottom: 0; 
-    height: 50px;
+    height: 1.5rem;
     background-color:rgba(133, 187, 8, 0.582);
+    position: fixed;
+
 }
 .FooterText{
-    font-size: 1.3rem;
-    font-family: 'Fredericka the Great', cursive;
-    
     text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Fredericka the Great', cursive;      
+   position: absolute;
+    bottom: 0;
+    left:0; right:0;
+    text-align: center;
+   
 }
