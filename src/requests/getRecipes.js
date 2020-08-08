@@ -21,6 +21,7 @@ const getRecipes = (query) => {
           image: result.image,
           title: result.title,
           id: result.id,
+          link: result.sourceUrl,
           key: result.id,
         };
       });

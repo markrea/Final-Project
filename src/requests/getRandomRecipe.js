@@ -11,6 +11,7 @@ const getRandomRecipe = () => {
           image: Results.recipes[0].image,
           title: Results.recipes[0].title,
           id: Results.recipes[0].id,
+          link: Results.recipes[0].sourceUrl,
         },
       ];
 
