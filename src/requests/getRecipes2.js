@@ -6,7 +6,6 @@ const getRecipes2 = (query, diet) => {
   }
 
   const request = query.toLowerCase();
-  console.log(diet);
 
   return axios
     .get(
