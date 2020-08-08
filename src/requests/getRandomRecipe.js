@@ -14,7 +14,7 @@ const getRandomRecipe = () => {
         },
       ];
 
-      console.log(processed);
+    //   console.log(processed);
       return processed;
     })
 
