@@ -1,12 +1,5 @@
 import axios from "axios";
 
-const API_KEY = process.env.REACT_APP_API_KEY1;
-//const API_KEY2 = process.env.REACT_APP_API_KEY2;
-const API_KEY3 = process.env.REACT_APP_API_KEY3;
-const API_KEY2 = "48aba1bc5bce4ba3901fc4b1e3591949";
-
-
-
 const getRecipes2 = (query) => {
   if (!query) {
     return Promise.resolve([]);
@@ -16,7 +9,7 @@ const getRecipes2 = (query) => {
 
   return axios
     .get(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY2}&query=${request}&number=2`
+      `https://immense-castle-65887.herokuapp.com/recipename?query=${request}&number=2`
     )
     .then((response) => {
       const Results = response.data.results;
@@ -27,6 +20,8 @@ const getRecipes2 = (query) => {
           image: result.image,
           title: result.title,
           id: result.id,
+          link: result.sourceUrl,
+          key: result.id,
         };
       });
       // console.log(processed.title);
