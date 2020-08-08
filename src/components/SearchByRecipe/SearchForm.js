@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/Search.css";
+import Select from "react-select";
+import makeAnimated from "react-select/animated";
 
 const SearchForm = ({
   handleSubmit,
   handleChange,
   handleSelect,
+  handleIntolerances,
   query,
   diet,
+  setIntolerances,
 }) => {
+  const options = [
+    { value: "dairy", label: "Dairy" },
+    { value: "egg", label: "Egg" },
+    { value: "peanut", label: "Peanut" },
+    { value: "seafood", label: "Seafood" },
+    { value: "sesame", label: "Sesame" },
+    { value: "shellfish", label: "Shellfish" },
+    { value: "soy", label: "Soy" },
+    { value: "treenut", label: "Tree Nut" },
+  ];
   return (
     <form
       type="text"
@@ -43,6 +57,16 @@ const SearchForm = ({
           <option value="glutenfree">Gluten Free</option>
           <option vaule="pescatarian">Pescastarian</option>
         </select>
+        <Select
+          isMulti
+          autoFocus
+          name="colors"
+          options={options}
+          className="basic-multi-select"
+          classNamePrefix="select"
+          placeholder="Select intolerances"
+          onChange={setIntolerances}
+        />
       </fieldset>
     </form>
   );

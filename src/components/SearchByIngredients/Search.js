@@ -6,10 +6,11 @@ import SearchForm from "./SearchForm";
 const Search = ({ setSearchResults }) => {
   const [value, setValue] = useState("");
   const [diet, setDiet] = useState("");
+  const [intolerances, setIntolerances] = useState([]);
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // stops browser reloading
-    setSearchResults(await getRecipes(value, diet));
+    setSearchResults(await getRecipes(value, diet, intolerances));
   };
 
   const handleChange = async (e) => {
@@ -27,6 +28,7 @@ const Search = ({ setSearchResults }) => {
         handleSelect={handleSelect}
         query={value}
         diet={diet}
+        setIntolerances={setIntolerances}
       />
     </div>
   );

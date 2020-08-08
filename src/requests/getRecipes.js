@@ -1,16 +1,16 @@
 import axios from "axios";
 
-const getRecipes = (query, diet) => {
+const getRecipes = (query, diet, intolerances) => {
   if (!query) {
     return Promise.resolve([]);
   }
 
   const request = query.toLowerCase();
-
+  console.log(intolerances);
   return axios
 
     .get(
-      `https://immense-castle-65887.herokuapp.com/recipes?ingredients=${request}&diet=${diet}&intolerances=null`
+      `https://immense-castle-65887.herokuapp.com/recipes?ingredients=${request}&diet=${diet}&intolerances=${intolerances}`
     )
     .then((response) => {
       const Results = response.data.results;
