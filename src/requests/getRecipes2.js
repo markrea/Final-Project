@@ -6,7 +6,6 @@ const getRecipes2 = (query, diet, intolerances) => {
   }
   const intoleranceValue = intolerances[0].value;
   const request = query.toLowerCase();
-  console.log(intoleranceValue);
   return axios
     .get(
       `https://immense-castle-65887.herokuapp.com/recipename?query=${request}&diet=${diet}&intolerances=${intoleranceValue}`

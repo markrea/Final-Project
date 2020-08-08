@@ -4,13 +4,13 @@ const getRecipes = (query, diet, intolerances) => {
   if (!query) {
     return Promise.resolve([]);
   }
-
+  const intoleranceValue = intolerances[0].value;
   const request = query.toLowerCase();
-  console.log(intolerances);
+
   return axios
 
     .get(
-      `https://immense-castle-65887.herokuapp.com/recipes?ingredients=${request}&diet=${diet}&intolerances=${intolerances}`
+      `https://immense-castle-65887.herokuapp.com/recipes?ingredients=${request}&diet=${diet}&intolerances=${intoleranceValue}`
     )
     .then((response) => {
       const Results = response.data.results;

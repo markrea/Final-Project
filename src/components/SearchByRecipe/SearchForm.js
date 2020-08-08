@@ -7,7 +7,6 @@ const SearchForm = ({
   handleSubmit,
   handleChange,
   handleSelect,
-  handleIntolerances,
   query,
   diet,
   setIntolerances,
