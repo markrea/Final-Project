@@ -10,11 +10,14 @@ const SearchByIngredients = () => {
   return (
     <div className="SearchByIngredients">
       <div className="SearchByIngredientsText">
-        <h4>Search By Ingredients</h4>
-        <h6>Enter your ingredients below to see what you can make!</h6>
+        <h2>Search By Ingredients</h2>
       </div>
-      <Search setSearchResults={setSearchResults} />
-      <SearchResultsCard searchResults={searchResults} />
+      <div className="FormText">
+        <h6>Enter your ingredients below to see what you can make!</h6>
+
+        <Search setSearchResults={setSearchResults} />
+        <SearchResultsCard searchResults={searchResults} />
+      </div>
     </div>
   );
 };

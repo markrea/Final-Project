@@ -1,16 +1,12 @@
-body,html{
+body,html {
   margin: 0;
   padding:0;
 }
-.App {
-  margin: 0;
-   
-  background-image: url('https://i.pinimg.com/originals/b0/43/c1/b043c1be7ed0d4f085e356e159250c69.jpg'); 
- 
-  background-size: cover;
 
-  height: calc(100vh - 9px); 
+.App {
+  margin: 0;   
+  background-image: url('https://images.pexels.com/photos/2750558/pexels-photo-2750558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');  
+  background-size: cover;
+  height: 100vh; 
   font-size: calc(10px + 2vmin);
-  color: white;
-  
 }
