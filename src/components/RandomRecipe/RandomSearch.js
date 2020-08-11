@@ -11,7 +11,7 @@ const RandomSearch = ({ setSearchResults }) => {
   };
 
   return (
-    <div className="RandomRecipe" data-testid="searchFormDiv">
+    <div className="RandomRecipe" data-testid="buttonDiv">
       <button className="randomButton" type="button" onClick={handleClick}>
         Go!
       </button>
