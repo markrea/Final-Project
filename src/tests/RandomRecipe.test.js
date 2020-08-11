@@ -24,4 +24,12 @@ describe("RandomRecipe", () => {
       "SearchByIngredients"
     );
   });
+  it("renders a title", () => {
+    const { getByText } = render(
+      <MemoryRouter>
+        <RandomRecipe />
+      </MemoryRouter>
+    );
+    expect(getByText("Random Recipe")).toBeInTheDocument();
+  });
 });
