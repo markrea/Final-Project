@@ -4,7 +4,7 @@ import SearchResults from "../components/SearchByIngredients/SearchResults";
 import "@testing-library/jest-dom/extend-expect";
 
 const props = {
-  searchResults: [],
+  SearchResults: [],
 };
 
 describe("SearchResults", () => {
