@@ -4,8 +4,6 @@ import { MemoryRouter } from "react-router-dom";
 import "@testing-library/jest-dom/extend-expect";
 import RandomSearch from "../components/RandomRecipe/RandomRecipe";
 
-const mockOnClick = jest.fn();
-
 describe("RandomSearch", () => {
   it("component renders correctly with props", () => {
     const { asFragment } = render(
