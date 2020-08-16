@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import getRandomRecipe from "../../requests/getRandomRecipe";
 import "../../styles/Search.css";
 import "../../styles/RandomRecipe.css";
 
 const RandomSearch = ({ setSearchResults }) => {
-  // const [value, setValue] = useState("");
+
   const handleClick = async (event) => {
     event.preventDefault();
     setSearchResults(await getRandomRecipe());

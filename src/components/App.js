@@ -7,7 +7,8 @@ import Footer from "./Footer";
 import "../styles/App.css";
 import SearchByIngredients from "./SearchByIngredients/SearchByIngredients";
 import SearchByRecipe from "./SearchByRecipe/SearchByRecipe";
-import RandomRecipe from "./RandomRecipe/RandomRecipe"
+import RandomRecipe from "./RandomRecipe/RandomRecipe";
+import FoodJoke from "./Joke/foodJoke";
 
 const dotenv = require("dotenv").config();
 
@@ -18,6 +19,7 @@ function App() {
     <div className="App" data-testid="App-div">
       <header className="App-header">
         <NavBar />
+        <FoodJoke />
 
         <Switch>
           <Route exact path="/" component={HomePage} />
