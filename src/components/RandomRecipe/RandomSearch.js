@@ -4,7 +4,6 @@ import "../../styles/Search.css";
 import "../../styles/RandomRecipe.css";
 
 const RandomSearch = ({ setSearchResults }) => {
-
   const handleClick = async (event) => {
     event.preventDefault();
     setSearchResults(await getRandomRecipe());

@@ -1,24 +1,19 @@
 import axios from "axios";
 
-const API_KEY = process.env.REACT_APP_API_KEY1;
-const API_KEY2 = process.env.REACT_APP_API_KEY2;
-const API_KEY3 = process.env.REACT_APP_API_KEY3;
-
-
-
-const getRecipes = (query) => {
+const getRecipes = (query, diet, intolerances) => {
   if (!query) {
     return Promise.resolve([]);
   }
-
+  const intoleranceValue = intolerances[0].value;
   const request = query.toLowerCase();
 
   return axios
+
     .get(
-      `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY2}&ingredients=${request}&number=2`
+      `https://immense-castle-65887.herokuapp.com/recipes?ingredients=${request}&diet=${diet}&intolerances=${intoleranceValue}`
     )
     .then((response) => {
-      const Results = response.data;
+      const Results = response.data.results;
       console.log("Results: ", Results);
 
       const processed = Results.map((result) => {
@@ -26,9 +21,11 @@ const getRecipes = (query) => {
           image: result.image,
           title: result.title,
           id: result.id,
+          link: result.sourceUrl,
+          key: result.id,
         };
       });
-      // console.log(processed.title);
+      console.log(processed.title);
 
       console.log(processed);
       return processed;
