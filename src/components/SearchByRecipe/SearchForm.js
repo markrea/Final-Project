@@ -42,7 +42,7 @@ const SearchForm = ({
           Go!
         </button>
         <br />
-        <label htmlFor="diet">Diet</label>
+        {/* <label htmlFor="diet">Diet</label> */}
         <select
           id="diet"
           name="diet"
@@ -50,7 +50,7 @@ const SearchForm = ({
           value={diet}
           onChange={handleSelect}
         >
-          <option defaultValue="null">None</option>
+          <option defaultValue="null">Select Diet</option>
           <option value="vegetarian">Vegetarian</option>
           <option value="vegan">Vegan</option>
           <option value="glutenfree">Gluten Free</option>
@@ -61,10 +61,15 @@ const SearchForm = ({
           autoFocus
           name="colors"
           options={options}
-          className="basic-multi-select"
+          className="select-container"
           classNamePrefix="select"
           placeholder="Select intolerances"
           onChange={setIntolerances}
+          theme={theme => ({
+            ...theme,
+            borderRadius: "10px",
+            backgroundColor: "rgba(196, 208, 162, 1)",
+          })}
         />
       </fieldset>
     </form>

@@ -31,8 +31,42 @@ label, input, button {
     border-radius: 0;
     -webkit-appearance: none;
     border: 1px solid transparent;
+    
   
 }
+
+select {
+    background-color: rgba(133, 187, 8, 0.26);
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+.select-container {
+    display: inline-block;
+    width: 20%;
+    font-size: 1.5vw;
+    color: black;
+    background-color: rgba(195, 207, 162, 1);
+    border-radius: 10px;
+
+    
+}
+
+.select__control {
+    border-radius: 10px;
+    border: black solid 5px;
+}
+
+.select__value-container {
+    background-color: rgba(133, 187, 8, 0.26);
+
+}
+.select__dropdown-indicator {
+    color: black;
+}
+
 button{
     border-radius: 0px 10px 10px 0px;
 }
