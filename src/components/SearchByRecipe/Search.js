@@ -21,7 +21,6 @@ const Search = ({ setSearchResults }) => {
     setDiet(e.target.value);
   };
 
-
   return (
     <div className="searchFormDiv" data-testid="searchFormDiv">
       <SearchForm

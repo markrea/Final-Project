@@ -20,6 +20,7 @@ const Search = ({ setSearchResults }) => {
   const handleSelect = async (e) => {
     setDiet(e.target.value);
   };
+
   return (
     <div className="searchFormDiv" data-testid="searchFormDiv">
       <SearchForm

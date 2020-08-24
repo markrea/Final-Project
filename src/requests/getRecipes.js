@@ -4,7 +4,15 @@ const getRecipes = (query, diet, intolerances) => {
   if (!query) {
     return Promise.resolve([]);
   }
-  const intoleranceValue = intolerances[0].value;
+  console.log(intolerances);
+  const intoleranceToString = () => {
+    if (intolerances === null) {
+      return "";
+    }
+    return intolerances.map((intolerance) => intolerance.value.toString());
+  };
+  const intoleranceValue = intoleranceToString(intolerances).join("&");
+  console.log(intoleranceValue);
   const request = query.toLowerCase();
 
   return axios
