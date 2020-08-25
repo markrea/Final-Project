@@ -19,7 +19,6 @@ function App() {
     <div className="App" data-testid="App-div">
       <header className="App-header">
         <NavBar />
-        <FoodJoke />
 
         <Switch>
           <Route exact path="/" component={HomePage} />

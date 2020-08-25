@@ -29,6 +29,37 @@ const SearchForm = ({
       data-testid="searchForm"
     >
       <fieldset>
+        <select
+          id="diet"
+          name="diet"
+          size="1"
+          value={diet}
+          placeholder="Select Diet"
+          onChange={handleSelect}
+        >
+          <option defaultValue="null">Select Diet</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="glutenfree">Gluten Free</option>
+          <option value="pescatarian">Pescastarian</option>
+        </select>
+        <Select
+          isMulti
+          autoFocus
+          name="colors"
+          options={options}
+          className="select-container"
+          classNamePrefix="select"
+          placeholder="Select intolerances"
+          onChange={setIntolerances}
+          theme={(theme) => ({
+            ...theme,
+            borderRadius: "10px",
+            backgroundColor: "rgba(196, 208, 162, 1)",
+          })}
+        />
+        <br />
+
         <input
           id="search"
           name="recipeName"
@@ -42,30 +73,6 @@ const SearchForm = ({
           Go!
         </button>
         <br />
-        <label htmlFor="diet">Diet</label>
-        <select
-          id="diet"
-          name="diet"
-          size="1"
-          value={diet}
-          onChange={handleSelect}
-        >
-          <option defaultValue="null">None</option>
-          <option value="vegetarian">Vegetarian</option>
-          <option value="vegan">Vegan</option>
-          <option value="glutenfree">Gluten Free</option>
-          <option vaule="pescatarian">Pescastarian</option>
-        </select>
-        <Select
-          isMulti
-          autoFocus
-          name="colors"
-          options={options}
-          className="basic-multi-select"
-          classNamePrefix="select"
-          placeholder="Select intolerances"
-          onChange={setIntolerances}
-        />
       </fieldset>
     </form>
   );

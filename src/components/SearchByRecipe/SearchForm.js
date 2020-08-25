@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../styles/Search.css";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
@@ -29,33 +29,23 @@ const SearchForm = ({
       data-testid="searchForm"
     >
       <fieldset>
-        <input
-          id="search"
-          name="recipeName"
-          type="text"
-          placeholder="Enter ingredients"
-          onChange={handleChange}
-          value={query}
-          data-testid="input-id"
-        />
-        <button type="submit" className="submit">
-          Go!
-        </button>
-        <br />
+        
         {/* <label htmlFor="diet">Diet</label> */}
         <select
           id="diet"
           name="diet"
           size="1"
-          value={diet}
+          value={diet}          
+          placeholder="Select Diet"
           onChange={handleSelect}
         >
           <option defaultValue="null">Select Diet</option>
           <option value="vegetarian">Vegetarian</option>
           <option value="vegan">Vegan</option>
           <option value="glutenfree">Gluten Free</option>
-          <option vaule="pescatarian">Pescastarian</option>
+          <option value="pescatarian">Pescastarian</option>
         </select>
+
         <Select
           isMulti
           autoFocus
@@ -71,6 +61,20 @@ const SearchForm = ({
             backgroundColor: "rgba(196, 208, 162, 1)",
           })}
         />
+        <br />
+        <input
+          id="search"
+          name="recipeName"
+          type="text"
+          placeholder="Enter ingredients"
+          onChange={handleChange}
+          value={query}
+          data-testid="input-id"
+        />
+        <button type="submit" className="submit">
+          Go!
+        </button>
+        <br />
       </fieldset>
     </form>
   );

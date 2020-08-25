@@ -10,12 +10,12 @@ form {
     margin: 20px;
     align-items: center;  
     text-align: center;     
-    padding: 0;  
-    
+    padding: 0;     
   
 }
 fieldset{
     border: none;
+    
 }
 h4, h6{
     text-align: center;
@@ -30,8 +30,7 @@ label, input, button {
     font-size: 20px;
     border-radius: 0;
     -webkit-appearance: none;
-    border: 1px solid transparent;
-    
+    border: 1px solid transparent;    
   
 }
 
@@ -43,28 +42,19 @@ select {
     border-radius: 10px;
     border: none;
 }
+
+
 .select-container {
     display: inline-block;
     width: 20%;
     font-size: 1.5vw;
     color: black;
-    background-color: rgba(195, 207, 162, 1);
     border-radius: 10px;
-
-    
-}
-
-.select__control {
-    border-radius: 10px;
-    border: black solid 5px;
 }
 
 .select__value-container {
-    background-color: rgba(133, 187, 8, 0.26);
+    background-color: rgba(117, 161, 16, 0.377);
 
-}
-.select__dropdown-indicator {
-    color: black;
 }
 
 button{
@@ -81,7 +71,7 @@ button:hover{
     
     border-radius:  10px 0px 0px 10px;
     position: relative;
-    background-color: rgba(133, 187, 8, 0.26);;
+    background-color: rgba(133, 187, 8, 0.26);
     transition: 0.3s all;
 }
 #search:hover {

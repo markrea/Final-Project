@@ -13,7 +13,9 @@ const RandomRecipe = () => {
       <div className="SearchByIngredientsText">
         <h2>Random Recipe</h2>
         <div className="FormText">
-          <h6>Can&apos;t decide what to make? See a random recipe!</h6>
+          <div className="mainText">
+            <h4>Can&apos;t decide what to make? See a random recipe!</h4>
+          </div>
         </div>
 
         <RandomSearch setSearchResults={setSearchResults} />

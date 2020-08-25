@@ -3,6 +3,7 @@ import Search from "./Search";
 import SearchResultsCard from "./SearchResultsCard";
 
 import "../../styles/SearchByIngredients.css";
+import "../../styles/HomePage.css";
 
 const SearchByIngredients = () => {
   const [searchResults, setSearchResults] = useState(null);
@@ -13,7 +14,9 @@ const SearchByIngredients = () => {
         <h2>Search By Ingredients</h2>
       </div>
       <div className="FormText">
-        <h6>Enter your ingredients below to see what you can make!</h6>
+        <div className="mainText">
+          <h4>Enter your ingredients below to see what you can make!</h4>
+        </div>
 
         <Search setSearchResults={setSearchResults} />
         <SearchResultsCard searchResults={searchResults} />

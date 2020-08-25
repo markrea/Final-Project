@@ -13,7 +13,9 @@ const SearchByRecipe = () => {
         <h2>Search By Recipe</h2>
       </div>
       <div className="FormText">
-        <h6>Enter a recipe to get started!</h6>
+        <div className="mainText">
+          <h4>Enter a recipe to get started!</h4>
+        </div>
 
         <Search setSearchResults={setSearchResults} />
         <SearchResultsCard searchResults={searchResults} />
