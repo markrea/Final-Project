@@ -15,7 +15,7 @@ const SearchByIngredients = () => {
       </div>
       <div className="FormText">
         <div className="mainText">
-          <h4>Enter your ingredients below to see what you can make!</h4>
+          <h4>Enter your ingredients below to see what you can make.</h4>
         </div>
 
         <Search setSearchResults={setSearchResults} />

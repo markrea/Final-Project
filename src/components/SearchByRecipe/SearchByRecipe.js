@@ -14,7 +14,7 @@ const SearchByRecipe = () => {
       </div>
       <div className="FormText">
         <div className="mainText">
-          <h4>Enter a recipe to get started!</h4>
+          <h4>Enter a recipe to get started.</h4>
         </div>
 
         <Search setSearchResults={setSearchResults} />
