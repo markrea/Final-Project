@@ -1,4 +1,5 @@
 body,html {
+  height: 100vh;
   margin: 0;
   padding:0;
 }
@@ -7,6 +8,8 @@ body,html {
   margin: 0;   
   background-image: url('https://images.pexels.com/photos/2750558/pexels-photo-2750558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');  
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh; 
   font-size: calc(10px + 1.5vmin);
 }

@@ -6,7 +6,7 @@ const getRecipes2 = (query, diet, intolerances) => {
   }
   const intoleranceToString = () => {
     if (intolerances === null) {
-      return "";
+      return [];
     }
     return intolerances.map((intolerance) => intolerance.value.toString());
   };

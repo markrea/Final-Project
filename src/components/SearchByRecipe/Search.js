@@ -6,7 +6,7 @@ import SearchForm from "./SearchForm";
 const Search = ({ setSearchResults }) => {
   const [value, setValue] = useState("");
   const [diet, setDiet] = useState("");
-  const [intolerances, setIntolerances] = useState("");
+  const [intolerances, setIntolerances] = useState([]);
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // stops browser reloading
