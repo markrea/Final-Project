@@ -28,6 +28,9 @@ const getRecipes = (query, diet, intolerances) => {
         return {
           image: result.image,
           title: result.title,
+          readyInMinutes: result.readyInMinutes,
+          calories: result.nutrition.nutrients[0].amount,
+          serves: result.servings,
           id: result.id,
           link: result.sourceUrl,
           key: result.id,

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import Search from "../SearchByIngredients/Search";
 import RandomSearch from "./RandomSearch";
-import SearchResultsCard from "../SearchByIngredients/SearchResultsCard";
+import SearchResultsCard from "./SearchResultsCard";
 import "../../styles/SearchByIngredients.css";
 import "../../styles/RandomRecipe.css";
 
