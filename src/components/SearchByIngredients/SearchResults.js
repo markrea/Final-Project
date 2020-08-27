@@ -10,9 +10,9 @@ const Result = ({ results }) => {
     <div key={results.image} className="innerSearchResult">
       <img src={results.image} alt="mockAlt" className="card-photo" />
       <figcaption className="caption">{results.title}</figcaption>
-      <figcaption className="readyIn">Ready in {results.readyInMinutes}mins</figcaption>
-      <figcaption className="serves">Serves {results.serves}</figcaption>
-      <figcaption className="calories"> {calories} Calories</figcaption>
+      <figcaption className="caption">Ready in {results.readyInMinutes}mins</figcaption>
+      <figcaption className="caption">Serves {results.serves}</figcaption>
+      <figcaption className="caption"> {calories} Calories</figcaption>
       <a href={results.link} target="_blank" rel="noopener noreferrer">
         View Recipe
       </a>
