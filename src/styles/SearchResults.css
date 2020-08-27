@@ -36,3 +36,8 @@ a{
     font-size: 60%;
 
 }
+
+.noResults {
+    text-align: center;
+    padding: 100px;
+}

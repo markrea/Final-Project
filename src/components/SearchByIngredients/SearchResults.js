@@ -4,13 +4,14 @@ import "../../styles/SearchResults.css";
 
 const Result = ({ results }) => {
   const calories = Math.round(results.calories);
-  
 
   return (
     <div key={results.image} className="innerSearchResult">
       <img src={results.image} alt="mockAlt" className="card-photo" />
       <figcaption className="caption">{results.title}</figcaption>
-      <figcaption className="caption">Ready in {results.readyInMinutes}mins</figcaption>
+      <figcaption className="caption">
+        Ready in {results.readyInMinutes}mins
+      </figcaption>
       <figcaption className="caption">Serves {results.serves}</figcaption>
       <figcaption className="caption"> {calories} Calories</figcaption>
       <a href={results.link} target="_blank" rel="noopener noreferrer">
@@ -20,13 +21,20 @@ const Result = ({ results }) => {
   );
 };
 const SearchResults = ({ searchResults }) => {
-  return (
-    <div className="SearchResults" data-testid="results-div">
-      <div className="test">
-        {searchResults.map((results) => (
-          <Result key={results.id} results={results} />
-        ))}
+  if (searchResults[0]) {
+    return (
+      <div className="SearchResults" data-testid="results-div">
+        <div className="test">
+          {searchResults.map((results) => (
+            <Result key={results.id} results={results} />
+          ))}
+        </div>
       </div>
+    );
+  }
+  return (
+    <div className="noResults">
+      <p>No recipes found. Please try another ingredient</p>
     </div>
   );
 };
