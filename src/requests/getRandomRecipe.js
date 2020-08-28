@@ -4,15 +4,16 @@ const getRandomRecipe = () => {
   return axios
     .get(`https://immense-castle-65887.herokuapp.com/random`)
     .then((response) => {
-      const Results = response.data;
+      const Results = response.data.recipes;
       console.log("Results: ", Results);
-      const processed = [
-        {
-          image: Results.recipes[0].image,
-          title: Results.recipes[0].title,
-          id: Results.recipes[0].id,
-        },
-      ];
+      const processed = Results.map((result) => {
+        return {
+          image: result.image,
+          title: result.title,
+          id: result.id,
+        };
+      });
+      
 
       console.log(processed);
       return processed;
