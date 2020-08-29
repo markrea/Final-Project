@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-// import Search from "../SearchByIngredients/Search";
 import RandomSearch from "./RandomSearch";
 import SearchResultsCard from "../SearchByIngredients/SearchResultsCard";
 import "../../styles/SearchByIngredients.css";
 import "../../styles/RandomRecipe.css";
 
+
+
 const RandomRecipe = () => {
   const [searchResults, setSearchResults] = useState(null);
+
 
   return (
     <div className="SearchByIngredients">
@@ -23,6 +25,7 @@ const RandomRecipe = () => {
           <SearchResultsCard searchResults={searchResults} />
         </div>
       </div>
+
     </div>
   );
 };
