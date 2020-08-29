@@ -14,6 +14,7 @@ const SearchForm = ({
   const options = [
     { value: "dairy", label: "Dairy" },
     { value: "egg", label: "Egg" },
+    { value: "gluten", label: "Gluten" },
     { value: "peanut", label: "Peanut" },
     { value: "seafood", label: "Seafood" },
     { value: "sesame", label: "Sesame" },
@@ -66,7 +67,7 @@ const SearchForm = ({
           id="search"
           name="recipeName"
           type="text"
-          placeholder="Enter ingredients"
+          placeholder="Enter Recipe Name"
           onChange={handleChange}
           value={query}
           data-testid="input-id"

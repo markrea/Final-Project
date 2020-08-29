@@ -9,7 +9,7 @@ import SearchForm from "./SearchForm";
 const Search = ({ setSearchResults }) => {
   const [value, setValue] = useState("");
   const [diet, setDiet] = useState("");
-  const [intolerances, setIntolerances] = useState("");
+  const [intolerances, setIntolerances] = useState([]);
   const [loading, setLoading] = useState(false);
 
 

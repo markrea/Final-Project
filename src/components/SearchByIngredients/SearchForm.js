@@ -14,6 +14,7 @@ const SearchForm = ({
   const options = [
     { value: "dairy", label: "Dairy" },
     { value: "egg", label: "Egg" },
+    { value: "gluten", label: "Gluten" },
     { value: "peanut", label: "Peanut" },
     { value: "seafood", label: "Seafood" },
     { value: "sesame", label: "Sesame" },
@@ -21,6 +22,7 @@ const SearchForm = ({
     { value: "soy", label: "Soy" },
     { value: "treenut", label: "Tree Nut" },
   ];
+  
   return (
     <form
       type="text"
@@ -43,6 +45,7 @@ const SearchForm = ({
           <option value="glutenfree">Gluten Free</option>
           <option value="pescatarian">Pescastarian</option>
         </select>
+        <br />
         <Select
           isMulti
           autoFocus

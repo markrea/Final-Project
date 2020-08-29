@@ -6,7 +6,7 @@ const getRecipes2 = (query, diet, intolerances) => {
   }
   const intoleranceToString = () => {
     if (intolerances === null) {
-      return "";
+      return [];
     }
     return intolerances.map((intolerance) => intolerance.value.toString());
   };
@@ -24,6 +24,9 @@ const getRecipes2 = (query, diet, intolerances) => {
       const processed = Results.map((result) => {
         return {
           image: result.image,
+          readyInMinutes: result.readyInMinutes,
+          calories: result.nutrition.nutrients[0].amount,
+          serves: result.servings,
           title: result.title,
           id: result.id,
           link: result.sourceUrl,
