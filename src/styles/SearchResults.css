@@ -57,7 +57,7 @@ a{
         margin-top: 20px;
     
     }
-    .resultBox:first-of-type{
+    .innerSearchResult:first-of-type{
         margin-top: 30%;
     }
 }
