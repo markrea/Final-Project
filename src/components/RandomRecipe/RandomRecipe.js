@@ -11,7 +11,7 @@ const RandomRecipe = () => {
 
 
   return (
-    <div className="SearchByIngredients">
+    <div className="SearchByIngredients" data-testid="SearchByIngredients">
       <div className="SearchByIngredientsText">
         <h2>Random Recipe</h2>
         <div className="FormText">

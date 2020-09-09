@@ -1,6 +1,6 @@
 import React from "react";
-import { render, waitForElement, fireEvent } from "@testing-library/react";
-import Search from "../components/Search";
+import { render } from "@testing-library/react";
+import Search from "../components/SearchByIngredients/Search";
 import "@testing-library/jest-dom/extend-expect";
 
 const props = {
@@ -15,7 +15,7 @@ describe("Search", () => {
   it("returns a div with SearchForm component", () => {
     const { getByTestId } = render(<Search {...props} />);
     const div = getByTestId("searchFormDiv");
-    expect(div).toHaveClassName("searchFormDiv");
+    expect(div).toHaveClass("searchFormDiv");
     expect(div).toBeInTheDocument();
   });
 });

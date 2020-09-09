@@ -28,7 +28,7 @@ describe("SearchForm", () => {
     const { getByRole } = render(<SearchForm {...props} />);
     const btn = getByRole("button");
     expect(btn).toBeInTheDocument();
-    expect(btn).toHaveTextContent("Go");
+    expect(btn).toHaveTextContent("Go!");
   });
   it("changes the state when input is changed", () => {
     const { getByTestId } = render(<SearchForm {...props} />);
