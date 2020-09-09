@@ -28,4 +28,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Once the app starts up, you should see a landing page:
 
-![Landing Page](https://github.com/markrea/Final-Project/blob/inputform/public/landing-page-fridge-tracker.png?raw=true)
+<p align="center">
+<img height="330" width="600" align="center" src="https://github.com/markrea/Final-Project/blob/inputform/public/landing-page-fridge-tracker.png?raw=true">
+</p>
