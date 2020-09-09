@@ -47,3 +47,17 @@ a{
     padding: 3px;
     
 }
+@media screen and (max-width: 600px){
+    .innerSearchResult{
+        display: grid;
+        grid-column: 1;
+        width: 70%;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    
+    }
+    .resultBox:first-of-type{
+        margin-top: 30%;
+    }
+}

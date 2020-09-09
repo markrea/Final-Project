@@ -6,6 +6,7 @@ const Result = ({ results }) => {
   const calories = Math.round(results.calories);
 
   return (
+    <div className="resultBox">
     <div key={results.image} className="innerSearchResult">
       <img src={results.image} alt="mockAlt" className="card-photo" />
       <figcaption className="caption"><b>{results.title}</b></figcaption>
@@ -17,6 +18,7 @@ const Result = ({ results }) => {
       <a href={results.link} target="_blank" rel="noopener noreferrer">
         View Recipe
       </a>
+    </div>
     </div>
   );
 };
