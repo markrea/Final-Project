@@ -12,12 +12,11 @@ const Result = ({ results }) => {
         <b>{results.title}</b>
       </figcaption>
       <figcaption className="caption">
-        Ready in {results.readyInMinutes}
+        Ready in: {results.readyInMinutes} 
         mins
       </figcaption>
       <figcaption className="caption">
-        Serves
-        {results.serves}
+        Serves: {results.serves}
       </figcaption>
       <figcaption className="caption"> {calories}
 {' '}
