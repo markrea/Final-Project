@@ -1,10 +1,6 @@
 import axios from "axios";
 
-<<<<<<< HEAD
 const getRecipes = (query, diet, intolerances) => {
-=======
-const getRecipes = (query) => {
->>>>>>> 2f15708ee937fe01d9758f48f1995224bd7f9692
   if (!query) {
     return Promise.resolve([]);
   }
