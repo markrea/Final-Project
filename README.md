@@ -19,9 +19,13 @@ To get started, you can either click on the deployed link or clone down the app 
 
 Once the app has been successfully cloned, hit
 
+ `npm install`
+ 
+ to install any missing dependencies. 
+
 `npm start`
 
-this will run the app in development mode.<br />
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Once the app starts up, you should see a landing page:
@@ -55,9 +59,15 @@ Each of these pages has been divided into components. First, a Search Form is re
 **3. Get a random Recipe**
 This uses the random recipe endpoint of the API to return several random recipes. 
 
-
 <p align="center">
 <img height="330" width="600" src="https://github.com/markrea/Final-Project/blob/inputform/public/FT-randomRecipe.png?raw=true">
+</p>
+
+
+## Responsiveness
+Keeping mobile first development in mind, the Fridge Tracker app has been made fully responsive. On mobiles, search results will adapt to a single column layout:
+<p align="center">
+<img height="520" width="290" src="https://github.com/markrea/Final-Project/blob/inputform/public/FT-mobileSearchResults.png?raw=true">
 </p>
 
 
