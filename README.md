@@ -70,4 +70,6 @@ Keeping mobile first development in mind, the Fridge Tracker app has been made f
 <img height="520" width="290" src="https://github.com/markrea/Final-Project/blob/inputform/public/FT-mobileSearchResults.png?raw=true">
 </p>
 
-
+## What more we could have done
+- We could add more features to the app by implementing results from other endpoints that were available to us from Spoonacular, particularly the wine pairing options. 
+- Styling would be redone using BootStrap.
