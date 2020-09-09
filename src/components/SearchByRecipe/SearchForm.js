@@ -30,13 +30,11 @@ const SearchForm = ({
       data-testid="searchForm"
     >
       <fieldset>
-        
-        {/* <label htmlFor="diet">Diet</label> */}
         <select
           id="diet"
           name="diet"
           size="1"
-          value={diet}          
+          value={diet}
           placeholder="Select Diet"
           onChange={handleSelect}
         >
@@ -56,7 +54,7 @@ const SearchForm = ({
           classNamePrefix="select"
           placeholder="Select intolerances"
           onChange={setIntolerances}
-          theme={theme => ({
+          theme={(theme) => ({
             ...theme,
             borderRadius: "10px",
             backgroundColor: "rgba(196, 208, 162, 1)",

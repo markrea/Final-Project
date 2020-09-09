@@ -8,7 +8,7 @@ const Result = ({ results }) => {
   return (
     <div key={results.image} className="innerSearchResult">
       <img src={results.image} alt="mockAlt" className="card-photo" />
-      <figcaption className="caption">{results.title}</figcaption>
+      <figcaption className="caption"><b>{results.title}</b></figcaption>
       <figcaption className="caption">
         Ready in {results.readyInMinutes}mins
       </figcaption>

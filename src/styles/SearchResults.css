@@ -23,21 +23,27 @@
        
 }
 
-.caption{
+.caption, a{
     text-align: center;
     padding: 0.5rem;
     color: rgb(67, 88, 7);
     font-size: 1rem;
     width: 90%;
 }
+/*
 a{
-    /*border: 1px solid blue;*/
+   
     text-align: center;
     font-size: 60%;
 
-}
+}*/
 
 .noResults {
     text-align: center;
     padding: 100px;
+}
+
+.caption{
+    padding: 3px;
+    
 }

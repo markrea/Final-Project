@@ -4,6 +4,7 @@
     height: inherit;
 }
 h1{          
+  display: inline;
     margin-left: 2rem;
     font-family: 'Fredericka the Great', cursive;
     font-weight: lighter;
@@ -85,4 +86,28 @@ h1{
     background: rgba(255, 255, 255, 0) !important;
     width: 150% !important;   
     
+  }
+  @media screen and (max-width: 600px){
+     .bm-cross-button {
+      display: flex;
+      height: 32px;
+      width: auto;
+
+  }  
+  .bm-cross {
+    background: #f0f1f1;
+
+  } 
+
+.bm-burger-button {
+  position: fixed;
+  width: 26px;
+  height: 20px;
+  right: 20px;
+  top: 20px;
+}
+
+  
+ 
+
   }
