@@ -1,6 +1,6 @@
 # FRIDGE TRACKER 
 
-Authors: [Mark Rhea](https://github.com/markrea), [Aidan Mueller](https://github.com/Ajaymueller) & [Sana Masood](https://github.com/SanMasood)
+Authors: [Mark Rea](https://github.com/markrea), [Aidan Mueller](https://github.com/Ajaymueller) & [Sana Masood](https://github.com/SanMasood)
 
 ## Introduction
 
