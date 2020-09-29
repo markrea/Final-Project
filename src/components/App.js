@@ -8,13 +8,11 @@ import "../styles/App.css";
 import SearchByIngredients from "./SearchByIngredients/SearchByIngredients";
 import SearchByRecipe from "./SearchByRecipe/SearchByRecipe";
 import RandomRecipe from "./RandomRecipe/RandomRecipe";
-import FoodJoke from "./Joke/foodJoke";
 
+// eslint-disable-next-line no-unused-vars
 const dotenv = require("dotenv").config();
 
 function App() {
-  // const [searchResults, setSearchResults] = useState(null);
-
   return (
     <div className="App" data-testid="App-div">
       <header className="App-header">
@@ -34,19 +32,6 @@ function App() {
         </Switch>
 
         <Footer />
-
-        {/*
-      <Switch>
-        <Route path="/" exact render={(props) => <HomePage {...props} />} />
-       
-       <Route
-          path="/search-by-ingredients"
-          exact
-          render={(props) => <SearchResults {...props} />}
-        />
-      </Switch> */}
-        {/* <Search setSearchResults={setSearchResults} />
-      <SearchResultsCard searchResults={searchResults} /> */}
       </header>
     </div>
   );

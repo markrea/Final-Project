@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import "../../styles/SearchResults.css";
 
 const Result = ({ results }) => {
-  
-
   return (
     <div key={results.image} className="innerSearchResult">
       <img src={results.image} alt="mockAlt" className="card-photo" />
@@ -26,7 +24,12 @@ const SearchResults = ({ searchResults }) => {
     </div>
   );
 };
-SearchResults.propTypes = {
-  Result: PropTypes.array,
+
+Result.propTypes = {
+  results: PropTypes.objectOf.isRequired,
 };
+SearchResults.propTypes = {
+  searchResults: PropTypes.arrayOf.isRequired,
+};
+
 export default SearchResults;

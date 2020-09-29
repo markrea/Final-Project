@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Proptypes from "prop-types";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -51,5 +52,7 @@ const Search = ({ setSearchResults }) => {
     </div>
   );
 };
+Search.propTypes = {
+  setSearchResults: Proptypes.objectOf.isRequired,
+};
 export default Search;
-//  <i className="fa fa-search" aria-hidden="true" />

@@ -4,7 +4,7 @@ const getRecipes = (query, diet, intolerances) => {
   if (!query) {
     return Promise.resolve([]);
   }
-  console.log(intolerances);
+  // console.log(intolerances);
   const intoleranceToString = () => {
     if (intolerances === null) {
       return [];
@@ -12,7 +12,7 @@ const getRecipes = (query, diet, intolerances) => {
     return intolerances.map((intolerance) => intolerance.value.toString());
   };
   const intoleranceValue = intoleranceToString(intolerances).join("&");
-  console.log(intoleranceValue);
+  // console.log(intoleranceValue);
   const request = query.toLowerCase();
 
   return axios
@@ -22,7 +22,7 @@ const getRecipes = (query, diet, intolerances) => {
     )
     .then((response) => {
       const Results = response.data.results;
-      console.log("Results: ", Results);
+      // console.log("Results: ", Results);
 
       const processed = Results.map((result) => {
         return {
@@ -36,14 +36,15 @@ const getRecipes = (query, diet, intolerances) => {
           key: result.id,
         };
       });
-      console.log(processed.title);
+      // console.log(processed.title);
 
-      console.log(processed);
+      // console.log(processed);
       return processed;
     })
 
     .catch((err) => {
-      alert("Something went wrong. Please refresh your browser");
+      // eslint-disable-next-line no-alert
+      alert(err("Something went wrong. Please refresh your browser"));
     });
 };
 export default getRecipes;

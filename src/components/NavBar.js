@@ -9,7 +9,6 @@ const NavBar = () => {
       <div className="logo" data-testid="logo">
         <h1 className="appName">Fridge Tracker</h1>
       </div>
-      
 
       <Menu disableAutoFocus isOpen={false} right>
         <li className="navbar-links-item">
@@ -37,7 +36,6 @@ const NavBar = () => {
         </li>
         <hr />
       </Menu>
-      
     </div>
   );
 };

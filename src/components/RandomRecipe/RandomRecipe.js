@@ -4,11 +4,8 @@ import SearchResultsCard from "./SearchResultsCard";
 import "../../styles/SearchByIngredients.css";
 import "../../styles/RandomRecipe.css";
 
-
-
 const RandomRecipe = () => {
   const [searchResults, setSearchResults] = useState(null);
-
 
   return (
     <div className="SearchByIngredients" data-testid="SearchByIngredients">
@@ -25,7 +22,6 @@ const RandomRecipe = () => {
           <SearchResultsCard searchResults={searchResults} />
         </div>
       </div>
-
     </div>
   );
 };

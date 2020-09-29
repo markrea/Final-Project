@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/Search.css";
 import Select from "react-select";
-import makeAnimated from "react-select/animated";
+import Proptypes from "prop-types";
 
 const SearchForm = ({
   handleSubmit,
@@ -22,7 +22,7 @@ const SearchForm = ({
     { value: "soy", label: "Soy" },
     { value: "treenut", label: "Tree Nut" },
   ];
-  
+
   return (
     <form
       type="text"
@@ -78,6 +78,15 @@ const SearchForm = ({
       </fieldset>
     </form>
   );
+};
+
+SearchForm.propTypes = {
+  handleSubmit: Proptypes.func.isRequired,
+  handleChange: Proptypes.func.isRequired,
+  handleSelect: Proptypes.func.isRequired,
+  query: Proptypes.string.isRequired,
+  diet: Proptypes.string.isRequired,
+  setIntolerances: Proptypes.string.isRequired,
 };
 
 export default SearchForm;

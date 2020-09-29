@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import Proptypes from "prop-types";
 import Loader from "react-loader-spinner";
 import getRecipes2 from "../../requests/getRecipes2";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 import "../../styles/Search.css";
+// eslint-disable-next-line import/no-named-as-default-member
 import SearchForm from "./SearchForm";
 
 const Search = ({ setSearchResults }) => {
@@ -12,14 +14,12 @@ const Search = ({ setSearchResults }) => {
   const [intolerances, setIntolerances] = useState([]);
   const [loading, setLoading] = useState(false);
 
-
   const handleSubmit = async (event) => {
     setLoading(true);
 
     event.preventDefault(); // stops browser reloading
     setSearchResults(await getRecipes2(value, diet, intolerances));
     setLoading(false);
-
   };
 
   const handleChange = async (e) => {
@@ -52,5 +52,9 @@ const Search = ({ setSearchResults }) => {
       )}
     </div>
   );
+};
+
+Search.propTypes = {
+  setSearchResults: Proptypes.objectOf.isRequired,
 };
 export default Search;

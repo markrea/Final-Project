@@ -11,16 +11,18 @@ const Result = ({ results }) => {
         <b>{results.title}</b>
       </figcaption>
       <figcaption className="caption">
-        Ready in: {results.readyInMinutes}
+        Ready in:
+        {results.readyInMinutes}
         mins
       </figcaption>
       <figcaption className="caption">
-        Serves: {results.serves}
+        Serves:
+        {results.serves}
       </figcaption>
-      <figcaption className="caption"> {calories}
-{' '}
-Calories
-</figcaption>
+      <figcaption className="caption">
+        {calories}
+        Calories
+      </figcaption>
       <a href={results.link} target="_blank" rel="noopener noreferrer">
         View Recipe
       </a>
@@ -45,7 +47,11 @@ const SearchResults = ({ searchResults }) => {
     </div>
   );
 };
-SearchResults.propTypes = {
-  Result: PropTypes.array,
+Result.propTypes = {
+  results: PropTypes.objectOf.isRequired,
 };
+SearchResults.propTypes = {
+  searchResults: PropTypes.arrayOf.isRequired,
+};
+
 export default SearchResults;

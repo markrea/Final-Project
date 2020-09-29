@@ -5,7 +5,7 @@ const getRandomRecipe = () => {
     .get(`https://immense-castle-65887.herokuapp.com/random`)
     .then((response) => {
       const Results = response.data.recipes;
-      console.log("Results: ", Results);
+      // console.log("Results: ", Results);
       const processed = Results.map((result) => {
         return {
           image: result.image,
@@ -13,14 +13,13 @@ const getRandomRecipe = () => {
           id: result.id,
         };
       });
-      
-
-      console.log("random:",processed);
+      // console.log("random:",processed);
       return processed;
     })
 
     .catch((err) => {
-      alert("Something went wrong. Please refresh your browser");
+      // eslint-disable-next-line no-alert
+      alert(err("Something went wrong. Please refresh your browser"));
     });
 };
 export default getRandomRecipe;

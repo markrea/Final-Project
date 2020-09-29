@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Proptypes from "prop-types";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -9,7 +10,6 @@ import "../../styles/RandomRecipe.css";
 
 const RandomSearch = ({ setSearchResults }) => {
   const [loading, setLoading] = useState(false);
-
 
   const handleClick = async (event) => {
     setLoading(true);
@@ -34,8 +34,11 @@ const RandomSearch = ({ setSearchResults }) => {
           timeout={3000}
         />
       )}
-
     </div>
   );
 };
+RandomSearch.propTypes = {
+  setSearchResults: Proptypes.objectOf.isRequired,
+};
+
 export default RandomSearch;

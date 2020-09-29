@@ -1,4 +1,5 @@
 import React from "react";
+import Proptypes from "prop-types";
 import SearchResults from "./SearchResults";
 import "../../styles/App.css";
 
@@ -10,5 +11,9 @@ const SearchResultsCard = ({ searchResults }) => {
       </div>
     </div>
   );
+};
+
+SearchResultsCard.propTypes = {
+  searchResults: Proptypes.objectOf.isRequired,
 };
 export default SearchResultsCard;
