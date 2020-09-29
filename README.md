@@ -2,6 +2,9 @@
 
 Authors: [Mark Rea](https://github.com/markrea), [Aidan Mueller](https://github.com/Ajaymueller) & [Sana Masood](https://github.com/SanMasood)
 
+To view the deployed app [click here](https://fridge-tracker.netlify.app)
+
+
 ## Introduction
 
 The Fridge Tracker app is a friendly web app made with React that lets you browse through recipes depending on what ingredients you have. Alternatively, you can also search for a particular recipe or simply get a random recipe. 
