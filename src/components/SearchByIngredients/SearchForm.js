@@ -45,9 +45,10 @@ const SearchForm = ({
           <option value="glutenfree">Gluten Free</option>
           <option value="pescatarian">Pescastarian</option>
         </select>
+        <br />
         <Select
           isMulti
-          autoFocus
+          isSearchable={false}
           name="colors"
           options={options}
           className="select-container"
@@ -57,23 +58,23 @@ const SearchForm = ({
           theme={(theme) => ({
             ...theme,
             borderRadius: "10px",
-            backgroundColor: "rgba(196, 208, 162, 1)",
           })}
         />
         <br />
-
-        <input
-          id="search"
-          name="recipeName"
-          type="text"
-          placeholder="Enter ingredients"
-          onChange={handleChange}
-          value={query}
-          data-testid="input-id"
-        />
-        <button type="submit" className="submit">
-          Go!
-        </button>
+        <div className="search-bar">
+          <input
+            id="search"
+            name="recipeName"
+            type="text"
+            placeholder="Enter ingredients"
+            onChange={handleChange}
+            value={query}
+            data-testid="input-id"
+          />
+          <button type="submit" className="submit">
+            Go!
+          </button>
+        </div>
         <br />
       </fieldset>
     </form>

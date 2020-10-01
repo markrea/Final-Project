@@ -30,9 +30,12 @@ label, input, button {
     font-size: 20px;
     border-radius: 0;
     -webkit-appearance: none;
-    border: 1px solid transparent;    
+    border: 1px solid transparent;   
+    color: black; 
   
 }
+
+
 
 select {
     background-color: rgba(133, 187, 8, 0.26);
@@ -48,14 +51,21 @@ select {
 
 .select-container {
     display: inline-block;
-    width: 360px;    
-    border-radius: 10px;
+    width: 74%;    
+    border-radius: 10px; 
+    padding: none;
+    
     
 }
 
 .select__value-container {
-    background-color:rgba(133, 187, 8, 0.26);    
+    background-color:rgba(100, 199, 8, 0.493);   
+     
 
+}
+
+.select__option {
+    border: black;
 }
 
 button{
@@ -85,12 +95,62 @@ button:hover{
 }
 @media screen and (max-width: 600px){
     #search, select{
-        width: 50%;
+        width: 55%;
         background-color: rgba(100, 199, 8, 0.493);
+        margin-top: 20px;
 
     }
+    select {
+        width: 74%;
+        margin-bottom: 20px;
+    }
+  
     .loader{
         padding-top: 30%;
     }
     
+}
+
+@media screen and (min-width: 601px){
+    #search, select{
+        width: 40%;
+        background-color: rgba(100, 199, 8, 0.493);
+        margin-top: 20px;
+    }
+
+    select {
+        width: 51%;
+        margin-bottom: 20px;
+    }
+
+    .select-container {
+        display: inline-block;
+        width: 51%;    
+        border-radius: 10px; 
+        padding: none;
+        
+        
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #search, select{
+        width: 340px;
+        background-color: rgba(100, 199, 8, 0.493);
+        margin-top: 20px;
+    }
+
+    select {
+        width: 433px;
+        margin-bottom: 20px;
+    }
+
+    .select-container {
+        display: inline-block;
+        width: 433px;    
+        border-radius: 10px; 
+        padding: none;
+        
+        
+    }
 }

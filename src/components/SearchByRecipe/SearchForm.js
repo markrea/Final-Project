@@ -44,10 +44,10 @@ const SearchForm = ({
           <option value="glutenfree">Gluten Free</option>
           <option value="pescatarian">Pescastarian</option>
         </select>
-
+        <br />
         <Select
           isMulti
-          autoFocus
+          isSearchable={false}
           name="colors"
           options={options}
           className="select-container"

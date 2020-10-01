@@ -87,6 +87,8 @@ h1{
     width: 150% !important;   
     
   }
+
+  
   @media screen and (max-width: 600px){
      .bm-cross-button {
       display: flex;
@@ -107,7 +109,11 @@ h1{
   top: 20px;
 }
 
-  
+  h1 {
+   
+    font-size: 2.5em;
+    margin-left: 10px;
+  }
  
 
   }
