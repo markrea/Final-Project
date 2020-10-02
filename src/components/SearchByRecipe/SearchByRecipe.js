@@ -18,6 +18,9 @@ const SearchByRecipe = () => {
         </div>
 
         <Search setSearchResults={setSearchResults} />
+        <br />
+        <br />
+        <br />
         <SearchResultsCard searchResults={searchResults} />
       </div>
     </div>

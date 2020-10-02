@@ -54,6 +54,7 @@ select {
     width: 74%;    
     border-radius: 10px; 
     padding: none;
+   
     
     
 }
@@ -128,6 +129,7 @@ button:hover{
         width: 51%;    
         border-radius: 10px; 
         padding: none;
+        background-color: rgba(100, 199, 8, 0.493);
         
         
     }
