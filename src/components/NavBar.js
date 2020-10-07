@@ -18,7 +18,9 @@ const NavBar = () => {
         right
       >
         <li className="navbar-links-item">
-          <Link to="/" className="menu-item" />
+          <Link to="/" className="menu-item" onClick={setOpen}>
+            Home
+          </Link>
         </li>
         <hr />
         <li className="navbar-links-item">
