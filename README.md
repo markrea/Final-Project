@@ -4,6 +4,8 @@ Authors: [Mark Rea](https://github.com/markrea), [Aidan Mueller](https://github.
 
 To view the deployed app [click here](https://fridge-tracker.netlify.app)
 
+The back end for this project can be found [here](https://github.com/markrea/final-project-backend)
+
 
 ## Introduction
 
